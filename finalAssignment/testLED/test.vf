@@ -1,0 +1,35 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : test.vf
+// /___/   /\     Timestamp : 12/17/2021 15:16:35
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/testLED/test.vf -w E:/2D/Digital/finalAssignment/testLED/test.sch
+//Design Name: test
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module test(K6_3_P111, 
+            L7_P67);
+
+    input K6_3_P111;
+   output L7_P67;
+   
+   wire XLXN_39;
+   
+   OR2  XLXI_24 (.I0(XLXN_39), 
+                .I1(K6_3_P111), 
+                .O(L7_P67));
+   GND  XLXI_25 (.G(XLXN_39));
+endmodule

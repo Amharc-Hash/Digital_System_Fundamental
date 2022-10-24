@@ -1,0 +1,44 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Alarm_Garage_V6.vf
+// /___/   /\     Timestamp : 12/17/2021 17:37:18
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Alarm_Garage_V6.vf -w E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Alarm_Garage_V6.sch
+//Design Name: Alarm_Garage_V6
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module Alarm_Garage_V6(ESP_IN, 
+                       IR_5, 
+                       SW_IN, 
+                       ActiveGR, 
+                       MODE_ON_OFF);
+
+    input ESP_IN;
+    input IR_5;
+    input SW_IN;
+   output ActiveGR;
+   output MODE_ON_OFF;
+   
+   wire MODE_ON_OFF_DUMMY;
+   
+   assign MODE_ON_OFF = MODE_ON_OFF_DUMMY;
+   OR2  XLXI_3 (.I0(ESP_IN), 
+               .I1(SW_IN), 
+               .O(MODE_ON_OFF_DUMMY));
+   AND2  XLXI_11 (.I0(IR_5), 
+                 .I1(MODE_ON_OFF_DUMMY), 
+                 .O(ActiveGR));
+endmodule

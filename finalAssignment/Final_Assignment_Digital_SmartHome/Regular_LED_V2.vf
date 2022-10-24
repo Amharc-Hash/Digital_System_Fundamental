@@ -1,0 +1,89 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Regular_LED_V2.vf
+// /___/   /\     Timestamp : 12/17/2021 15:07:38
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Regular_LED_V2.vf -w E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Regular_LED_V2.sch
+//Design Name: Regular_LED_V2
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_Regular_LED_V2(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Regular_LED_V2(CLR_FF, 
+                      ESP_IN, 
+                      PB_IN, 
+                      SW_MODE_IN, 
+                      LED_OUT);
+
+    input CLR_FF;
+    input ESP_IN;
+    input PB_IN;
+    input SW_MODE_IN;
+   output LED_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_15;
+   wire XLXN_20;
+   
+   AND2  XLXI_1 (.I0(SW_MODE_IN), 
+                .I1(PB_IN), 
+                .O(XLXN_1));
+   OR2  XLXI_2 (.I0(ESP_IN), 
+               .I1(XLXN_1), 
+               .O(XLXN_15));
+   VCC  XLXI_6 (.P(XLXN_20));
+   (* HU_SET = "XLXI_8_8" *) 
+   FJKC_HXILINX_Regular_LED_V2  XLXI_8 (.C(XLXN_15), 
+                                       .CLR(CLR_FF), 
+                                       .J(XLXN_20), 
+                                       .K(XLXN_20), 
+                                       .Q(LED_OUT));
+endmodule

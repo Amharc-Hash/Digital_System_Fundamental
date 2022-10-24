@@ -1,0 +1,8 @@
+verilog work "CLK_DIV_10.vf"
+verilog work "Decoder_FullStep_OnePhase.vf"
+verilog work "Counter_Up_0_3.vf"
+verilog work "Counter_Down_3_0.vf"
+verilog work "CLK_DIV_100K.vf"
+verilog work "Kitchen_Curtain_V5.vf"
+verilog work "testKitchen.v"
+verilog work "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

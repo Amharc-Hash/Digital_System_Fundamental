@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\2D\Digital\finalAssignment\testLED\test.ncd
+OUTFILE=E:\2D\Digital\finalAssignment\testLED\test.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=E:\2D\Digital\finalAssignment\testLED
+LICENSE=WebPack
+USER_INFO=__0_0_0

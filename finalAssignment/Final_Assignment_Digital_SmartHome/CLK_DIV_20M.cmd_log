@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan6 -refsym CLK_DIV_20M E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/CLK_DIV_20M.sch E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/CLK_DIV_20M.sym 

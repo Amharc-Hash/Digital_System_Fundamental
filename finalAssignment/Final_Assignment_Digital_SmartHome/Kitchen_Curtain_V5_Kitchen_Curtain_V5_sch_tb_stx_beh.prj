@@ -1,0 +1,6 @@
+verilog isim_temp "Decoder_FullStep_OnePhase.vf"
+verilog isim_temp "Counter_Up_0_3.vf"
+verilog isim_temp "Counter_Down_3_0.vf"
+verilog isim_temp "Kitchen_Curtain_V5.vf"
+verilog isim_temp "testKitchen.v"
+verilog isim_temp "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"

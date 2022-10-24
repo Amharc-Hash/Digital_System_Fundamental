@@ -1,0 +1,6 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "K6_3_P111" LOC = P111;
+NET "L7_P67" LOC = P67;
+

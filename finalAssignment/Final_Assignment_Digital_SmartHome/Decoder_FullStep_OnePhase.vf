@@ -1,0 +1,83 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Decoder_FullStep_OnePhase.vf
+// /___/   /\     Timestamp : 12/15/2021 18:03:01
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Decoder_FullStep_OnePhase.vf -w E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Decoder_FullStep_OnePhase.sch
+//Design Name: Decoder_FullStep_OnePhase
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale  100 ps / 10 ps
+
+module D2_4E_HXILINX_Decoder_FullStep_OnePhase (D0, D1, D2, D3, A0, A1, E);
+    
+
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+
+   input  A0;
+   input  A1;
+   input  E;
+  
+   reg D0;
+   reg D1;
+   reg D2;
+   reg D3;
+
+      always @ (A0 or A1 or E)
+      begin
+         if(!E)
+           {D3, D2, D1, D0} <= 4'b0000;
+        else
+        begin
+           case({A1,A0})
+             2'b00 : {D3,D2,D1,D0} <= 4'b0001;
+             2'b01 : {D3,D2,D1,D0} <= 4'b0010;
+             2'b10 : {D3,D2,D1,D0} <= 4'b0100;
+             2'b11 : {D3,D2,D1,D0} <= 4'b1000;
+          endcase
+        end
+     end 
+
+endmodule
+`timescale 1ns / 1ps
+
+module Decoder_FullStep_OnePhase(IN_0, 
+                                 IN_1, 
+                                 Phase1, 
+                                 Phase2, 
+                                 Phase3, 
+                                 Phase4);
+
+    input IN_0;
+    input IN_1;
+   output Phase1;
+   output Phase2;
+   output Phase3;
+   output Phase4;
+   
+   wire XLXN_7;
+   
+   (* HU_SET = "XLXI_1_21" *) 
+   D2_4E_HXILINX_Decoder_FullStep_OnePhase  XLXI_1 (.A0(IN_0), 
+                                                   .A1(IN_1), 
+                                                   .E(XLXN_7), 
+                                                   .D0(Phase1), 
+                                                   .D1(Phase2), 
+                                                   .D2(Phase3), 
+                                                   .D3(Phase4));
+   VCC  XLXI_4 (.P(XLXN_7));
+endmodule

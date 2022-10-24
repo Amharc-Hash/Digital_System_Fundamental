@@ -1,0 +1,67 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : CLK_DIV_10.vf
+// /___/   /\     Timestamp : 12/15/2021 18:03:01
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/CLK_DIV_10.vf -w E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/CLK_DIV_10.sch
+//Design Name: CLK_DIV_10
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 1ns / 1ps
+
+module CLK_DIV_10(CLKIN, 
+                  CLKOUT);
+
+    input CLKIN;
+   output CLKOUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_8;
+   wire XLXN_13;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire CLKOUT_DUMMY;
+   
+   assign CLKOUT = CLKOUT_DUMMY;
+   INV  XLXI_1 (.I(XLXN_16), 
+               .O(XLXN_2));
+   INV  XLXI_2 (.I(XLXN_17), 
+               .O(XLXN_1));
+   FDC  XLXI_3 (.C(CLKIN), 
+               .CLR(XLXN_4), 
+               .D(XLXN_1), 
+               .Q(XLXN_17));
+   AND2  XLXI_4 (.I0(XLXN_16), 
+                .I1(XLXN_8), 
+                .O(XLXN_4));
+   INV  XLXI_5 (.I(XLXN_8), 
+               .O(CLKOUT_DUMMY));
+   FDC  XLXI_6 (.C(XLXN_1), 
+               .CLR(XLXN_4), 
+               .D(XLXN_2), 
+               .Q(XLXN_16));
+   INV  XLXI_7 (.I(XLXN_13), 
+               .O(XLXN_3));
+   FDC  XLXI_8 (.C(XLXN_2), 
+               .CLR(XLXN_4), 
+               .D(XLXN_3), 
+               .Q(XLXN_13));
+   FDC  XLXI_9 (.C(XLXN_3), 
+               .CLR(XLXN_4), 
+               .D(CLKOUT_DUMMY), 
+               .Q(XLXN_8));
+endmodule

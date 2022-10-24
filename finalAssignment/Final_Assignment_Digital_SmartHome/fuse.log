@@ -1,0 +1,39 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Kitchen_Curtain_V5_Kitchen_Curtain_V5_sch_tb_isim_beh.exe -prj E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Kitchen_Curtain_V5_Kitchen_Curtain_V5_sch_tb_beh.prj work.Kitchen_Curtain_V5_Kitchen_Curtain_V5_sch_tb work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 12
+Turning on mult-threading, number of parallel sub-compilation jobs: 24 
+Determining compilation order of HDL files
+Analyzing Verilog file "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/CLK_DIV_10.vf" into library work
+Analyzing Verilog file "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Decoder_FullStep_OnePhase.vf" into library work
+Analyzing Verilog file "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Counter_Up_0_3.vf" into library work
+Analyzing Verilog file "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Counter_Down_3_0.vf" into library work
+Analyzing Verilog file "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/CLK_DIV_100K.vf" into library work
+Analyzing Verilog file "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Kitchen_Curtain_V5.vf" into library work
+Analyzing Verilog file "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/testKitchen.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module AND2
+Compiling module INV
+Compiling module OR2
+Compiling module FJKC_HXILINX_Kitchen_Curtain_V5
+Compiling module VCC
+Compiling module Counter_Down_3_0_MUSER_Kitchen_C...
+Compiling module Counter_Up_0_3_MUSER_Kitchen_Cur...
+Compiling module AND3
+Compiling module GND
+Compiling module D2_4E_HXILINX_Kitchen_Curtain_V5
+Compiling module Decoder_FullStep_OnePhase_MUSER_...
+Compiling module M2_1_HXILINX_Kitchen_Curtain_V5
+Compiling module FDC
+Compiling module CLK_DIV_10_MUSER_Kitchen_Curtain...
+Compiling module CLK_DIV_100K_MUSER_Kitchen_Curta...
+Compiling module Kitchen_Curtain_V5
+Compiling module Kitchen_Curtain_V5_Kitchen_Curta...
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 18 Verilog Units
+Built simulation executable E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Kitchen_Curtain_V5_Kitchen_Curtain_V5_sch_tb_isim_beh.exe
+Fuse Memory Usage: 28536 KB
+Fuse CPU Usage: 327 ms

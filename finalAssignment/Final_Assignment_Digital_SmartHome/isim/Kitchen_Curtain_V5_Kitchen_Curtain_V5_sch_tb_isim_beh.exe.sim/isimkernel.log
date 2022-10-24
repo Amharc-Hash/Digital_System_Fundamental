@@ -1,0 +1,28 @@
+Command line:
+   Kitchen_Curtain_V5_Kitchen_Curtain_V5_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  53138
+
+Fri Dec 17 16:03:48 2021
+
+
+ Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 5155.01 Meg
+
+ Total Signals          : 341
+ Total Nets             : 117
+ Total Signal Drivers   : 129
+ Total Blocks           : 79
+ Total Primitive Blocks : 68
+ Total Processes        : 219
+ Total Traceable Variables  : 81
+ Total Scalar Nets and Variables : 260
+
+ Total Simulation Time: 0.3125 sec
+
+ Current Memory Usage: 5155.01 Meg
+
+Fri Dec 17 16:04:18 2021
+

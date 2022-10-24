@@ -1,0 +1,88 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Alarm_Garage_V4.vf
+// /___/   /\     Timestamp : 12/15/2021 20:42:41
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Alarm_Garage_V4.vf -w E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Alarm_Garage_V4.sch
+//Design Name: Alarm_Garage_V4
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_Alarm_Garage_V4(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Alarm_Garage_V4(ESP_IN, 
+                       IR_5, 
+                       PB_IN, 
+                       SW_MODE_IN, 
+                       ActiveGR, 
+                       MODE_ON_OFF);
+
+    input ESP_IN;
+    input IR_5;
+    input PB_IN;
+    input SW_MODE_IN;
+   output ActiveGR;
+   output MODE_ON_OFF;
+   
+   wire XLXN_1;
+   wire XLXN_4;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire MODE_ON_OFF_DUMMY;
+   
+   assign MODE_ON_OFF = MODE_ON_OFF_DUMMY;
+   AND2  XLXI_1 (.I0(XLXN_1), 
+                .I1(PB_IN), 
+                .O(XLXN_4));
+   INV  XLXI_2 (.I(SW_MODE_IN), 
+               .O(XLXN_1));
+   OR2  XLXI_3 (.I0(ESP_IN), 
+               .I1(XLXN_4), 
+               .O(XLXN_6));
+   (* HU_SET = "XLXI_4_15" *) 
+   FTC_HXILINX_Alarm_Garage_V4  XLXI_4 (.C(XLXN_6), 
+                                       .CLR(XLXN_7), 
+                                       .T(XLXN_6), 
+                                       .Q(MODE_ON_OFF_DUMMY));
+   GND  XLXI_5 (.G(XLXN_7));
+   INV  XLXI_6 (.I(IR_5), 
+               .O(XLXN_9));
+   AND2  XLXI_11 (.I0(XLXN_9), 
+                 .I1(MODE_ON_OFF_DUMMY), 
+                 .O(ActiveGR));
+endmodule

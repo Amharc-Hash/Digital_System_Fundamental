@@ -1,0 +1,97 @@
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 
+xst -intstyle ise -ifn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.xst" -ofn "E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc AllComps.ucf -p xc6slx9-tqg144-3 AllComps.ngc AllComps.ngd  
+map -intstyle ise -p xc6slx9-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o AllComps_map.ncd AllComps.ngd AllComps.pcf 
+par -w -intstyle ise -ol high -mt off AllComps_map.ncd AllComps.ncd AllComps.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml AllComps.twx AllComps.ncd -o AllComps.twr AllComps.pcf -ucf AllComps.ucf 
+bitgen -intstyle ise -f AllComps.ut AllComps.ncd 

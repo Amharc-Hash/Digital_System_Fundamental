@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\2D\Digital\finalAssignment\Final_Assignment_Digital_SmartHome\AllComps.ncd
+OUTFILE=E:\2D\Digital\finalAssignment\Final_Assignment_Digital_SmartHome\AllComps.bit
+FAMILY=Spartan6
+PART=xc6slx9-3tqg144
+WORKINGDIR=E:\2D\Digital\finalAssignment\Final_Assignment_Digital_SmartHome
+LICENSE=WebPack
+USER_INFO=__0_0_0

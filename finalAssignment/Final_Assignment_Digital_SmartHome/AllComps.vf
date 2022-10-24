@@ -1,0 +1,719 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : AllComps.vf
+// /___/   /\     Timestamp : 12/17/2021 17:37:19
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.vf -w E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.sch
+//Design Name: AllComps
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_AllComps(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_AllComps(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale  100 ps / 10 ps
+
+module D2_4E_HXILINX_AllComps (D0, D1, D2, D3, A0, A1, E);
+    
+
+   output D0;
+   output D1;
+   output D2;
+   output D3;
+
+   input  A0;
+   input  A1;
+   input  E;
+  
+   reg D0;
+   reg D1;
+   reg D2;
+   reg D3;
+
+      always @ (A0 or A1 or E)
+      begin
+         if(!E)
+           {D3, D2, D1, D0} <= 4'b0000;
+        else
+        begin
+           case({A1,A0})
+             2'b00 : {D3,D2,D1,D0} <= 4'b0001;
+             2'b01 : {D3,D2,D1,D0} <= 4'b0010;
+             2'b10 : {D3,D2,D1,D0} <= 4'b0100;
+             2'b11 : {D3,D2,D1,D0} <= 4'b1000;
+          endcase
+        end
+     end 
+
+endmodule
+`timescale  100 ps / 10 ps
+
+module M2_1_HXILINX_AllComps (O, D0, D1, S0);
+    
+
+   output O;
+
+   input  D0;
+   input  D1;
+   input  S0;
+
+   reg O;
+
+   always @ ( D0 or D1 or S0)
+   begin
+      case(S0)
+      1'b0 : O <= D0;
+      1'b1 : O <= D1;
+      endcase
+   end
+    
+endmodule
+`timescale 1ns / 1ps
+
+module Alarm_Garage_V6_MUSER_AllComps(ESP_IN, 
+                                      IR_5, 
+                                      SW_IN, 
+                                      ActiveGR, 
+                                      MODE_ON_OFF);
+
+    input ESP_IN;
+    input IR_5;
+    input SW_IN;
+   output ActiveGR;
+   output MODE_ON_OFF;
+   
+   wire MODE_ON_OFF_DUMMY;
+   
+   assign MODE_ON_OFF = MODE_ON_OFF_DUMMY;
+   OR2  XLXI_3 (.I0(ESP_IN), 
+               .I1(SW_IN), 
+               .O(MODE_ON_OFF_DUMMY));
+   AND2  XLXI_11 (.I0(IR_5), 
+                 .I1(MODE_ON_OFF_DUMMY), 
+                 .O(ActiveGR));
+endmodule
+`timescale 1ns / 1ps
+
+module Decoder_FullStep_OnePhase_MUSER_AllComps(IN_0, 
+                                                IN_1, 
+                                                Phase1, 
+                                                Phase2, 
+                                                Phase3, 
+                                                Phase4);
+
+    input IN_0;
+    input IN_1;
+   output Phase1;
+   output Phase2;
+   output Phase3;
+   output Phase4;
+   
+   wire XLXN_7;
+   
+   (* HU_SET = "XLXI_1_18" *) 
+   D2_4E_HXILINX_AllComps  XLXI_1 (.A0(IN_0), 
+                                  .A1(IN_1), 
+                                  .E(XLXN_7), 
+                                  .D0(Phase1), 
+                                  .D1(Phase2), 
+                                  .D2(Phase3), 
+                                  .D3(Phase4));
+   VCC  XLXI_4 (.P(XLXN_7));
+endmodule
+`timescale 1ns / 1ps
+
+module CLK_DIV_10_MUSER_AllComps(CLKIN, 
+                                 CLKOUT);
+
+    input CLKIN;
+   output CLKOUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_8;
+   wire XLXN_13;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire CLKOUT_DUMMY;
+   
+   assign CLKOUT = CLKOUT_DUMMY;
+   INV  XLXI_1 (.I(XLXN_16), 
+               .O(XLXN_2));
+   INV  XLXI_2 (.I(XLXN_17), 
+               .O(XLXN_1));
+   FDC  XLXI_3 (.C(CLKIN), 
+               .CLR(XLXN_4), 
+               .D(XLXN_1), 
+               .Q(XLXN_17));
+   AND2  XLXI_4 (.I0(XLXN_16), 
+                .I1(XLXN_8), 
+                .O(XLXN_4));
+   INV  XLXI_5 (.I(XLXN_8), 
+               .O(CLKOUT_DUMMY));
+   FDC  XLXI_6 (.C(XLXN_1), 
+               .CLR(XLXN_4), 
+               .D(XLXN_2), 
+               .Q(XLXN_16));
+   INV  XLXI_7 (.I(XLXN_13), 
+               .O(XLXN_3));
+   FDC  XLXI_8 (.C(XLXN_2), 
+               .CLR(XLXN_4), 
+               .D(XLXN_3), 
+               .Q(XLXN_13));
+   FDC  XLXI_9 (.C(XLXN_3), 
+               .CLR(XLXN_4), 
+               .D(CLKOUT_DUMMY), 
+               .Q(XLXN_8));
+endmodule
+`timescale 1ns / 1ps
+
+module CLK_DIV_100K_MUSER_AllComps(CLK_IN, 
+                                   CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   
+   CLK_DIV_10_MUSER_AllComps  XLXI_1 (.CLKIN(CLK_IN), 
+                                     .CLKOUT(XLXN_1));
+   CLK_DIV_10_MUSER_AllComps  XLXI_2 (.CLKIN(XLXN_1), 
+                                     .CLKOUT(XLXN_2));
+   CLK_DIV_10_MUSER_AllComps  XLXI_3 (.CLKIN(XLXN_2), 
+                                     .CLKOUT(XLXN_3));
+   CLK_DIV_10_MUSER_AllComps  XLXI_4 (.CLKIN(XLXN_3), 
+                                     .CLKOUT(XLXN_4));
+   CLK_DIV_10_MUSER_AllComps  XLXI_5 (.CLKIN(XLXN_4), 
+                                     .CLKOUT(CLK_OUT));
+endmodule
+`timescale 1ns / 1ps
+
+module Counter_Down_3_0_MUSER_AllComps(CLK_IN, 
+                                       CLR_FF, 
+                                       D0, 
+                                       D1);
+
+    input CLK_IN;
+    input CLR_FF;
+   output D0;
+   output D1;
+   
+   wire XLXN_10;
+   wire XLXN_14;
+   wire D0_DUMMY;
+   
+   assign D0 = D0_DUMMY;
+   (* HU_SET = "XLXI_1_19" *) 
+   FJKC_HXILINX_AllComps  XLXI_1 (.C(CLK_IN), 
+                                 .CLR(CLR_FF), 
+                                 .J(XLXN_10), 
+                                 .K(XLXN_10), 
+                                 .Q(D1));
+   (* HU_SET = "XLXI_2_20" *) 
+   FJKC_HXILINX_AllComps  XLXI_2 (.C(CLK_IN), 
+                                 .CLR(CLR_FF), 
+                                 .J(XLXN_14), 
+                                 .K(XLXN_14), 
+                                 .Q(D0_DUMMY));
+   INV  XLXI_5 (.I(D0_DUMMY), 
+               .O(XLXN_10));
+   VCC  XLXI_6 (.P(XLXN_14));
+endmodule
+`timescale 1ns / 1ps
+
+module Counter_Up_0_3_MUSER_AllComps(CLK_IN, 
+                                     CLR_FF, 
+                                     D0, 
+                                     D1);
+
+    input CLK_IN;
+    input CLR_FF;
+   output D0;
+   output D1;
+   
+   wire XLXN_1;
+   wire D0_DUMMY;
+   
+   assign D0 = D0_DUMMY;
+   (* HU_SET = "XLXI_1_21" *) 
+   FJKC_HXILINX_AllComps  XLXI_1 (.C(CLK_IN), 
+                                 .CLR(CLR_FF), 
+                                 .J(D0_DUMMY), 
+                                 .K(D0_DUMMY), 
+                                 .Q(D1));
+   (* HU_SET = "XLXI_2_22" *) 
+   FJKC_HXILINX_AllComps  XLXI_2 (.C(CLK_IN), 
+                                 .CLR(CLR_FF), 
+                                 .J(XLXN_1), 
+                                 .K(XLXN_1), 
+                                 .Q(D0_DUMMY));
+   VCC  XLXI_4 (.P(XLXN_1));
+endmodule
+`timescale 1ns / 1ps
+
+module Garage_Door_V6_MUSER_AllComps(CLK_IN, 
+                                     ESP_IN, 
+                                     IR1_IN, 
+                                     IR2_IN, 
+                                     SW_IN, 
+                                     BD1, 
+                                     BD2, 
+                                     BD3, 
+                                     BD4);
+
+    input CLK_IN;
+    input ESP_IN;
+    input IR1_IN;
+    input IR2_IN;
+    input SW_IN;
+   output BD1;
+   output BD2;
+   output BD3;
+   output BD4;
+   
+   wire XLXN_2;
+   wire XLXN_5;
+   wire XLXN_8;
+   wire XLXN_9;
+   wire XLXN_10;
+   wire XLXN_99;
+   wire XLXN_100;
+   wire XLXN_101;
+   wire XLXN_102;
+   wire XLXN_103;
+   wire XLXN_104;
+   wire XLXN_105;
+   wire XLXN_107;
+   
+   INV  XLXI_2 (.I(XLXN_99), 
+               .O(XLXN_8));
+   OR2  XLXI_7 (.I0(ESP_IN), 
+               .I1(SW_IN), 
+               .O(XLXN_99));
+   Counter_Down_3_0_MUSER_AllComps  XLXI_19 (.CLK_IN(XLXN_9), 
+                                            .CLR_FF(XLXN_2), 
+                                            .D0(XLXN_102), 
+                                            .D1(XLXN_103));
+   Counter_Up_0_3_MUSER_AllComps  XLXI_20 (.CLK_IN(XLXN_10), 
+                                          .CLR_FF(XLXN_2), 
+                                          .D0(XLXN_100), 
+                                          .D1(XLXN_101));
+   AND3  XLXI_25 (.I0(XLXN_107), 
+                 .I1(XLXN_5), 
+                 .I2(XLXN_99), 
+                 .O(XLXN_10));
+   AND3  XLXI_26 (.I0(IR1_IN), 
+                 .I1(XLXN_5), 
+                 .I2(XLXN_8), 
+                 .O(XLXN_9));
+   GND  XLXI_28 (.G(XLXN_2));
+   CLK_DIV_100K_MUSER_AllComps  XLXI_33 (.CLK_IN(CLK_IN), 
+                                        .CLK_OUT(XLXN_5));
+   Decoder_FullStep_OnePhase_MUSER_AllComps  XLXI_49 (.IN_0(XLXN_104), 
+                                                     .IN_1(XLXN_105), 
+                                                     .Phase1(BD1), 
+                                                     .Phase2(BD2), 
+                                                     .Phase3(BD3), 
+                                                     .Phase4(BD4));
+   (* HU_SET = "XLXI_54_23" *) 
+   M2_1_HXILINX_AllComps  XLXI_54 (.D0(XLXN_102), 
+                                  .D1(XLXN_100), 
+                                  .S0(XLXN_99), 
+                                  .O(XLXN_104));
+   (* HU_SET = "XLXI_55_24" *) 
+   M2_1_HXILINX_AllComps  XLXI_55 (.D0(XLXN_103), 
+                                  .D1(XLXN_101), 
+                                  .S0(XLXN_99), 
+                                  .O(XLXN_105));
+   INV  XLXI_56 (.I(IR2_IN), 
+                .O(XLXN_107));
+endmodule
+`timescale 1ns / 1ps
+
+module Regular_LED_V3_MUSER_AllComps(ESP_IN, 
+                                     SW_IN, 
+                                     LED_OUT);
+
+    input ESP_IN;
+    input SW_IN;
+   output LED_OUT;
+   
+   
+   OR2  XLXI_2 (.I0(ESP_IN), 
+               .I1(SW_IN), 
+               .O(LED_OUT));
+endmodule
+`timescale 1ns / 1ps
+
+module CLK_DIV_10M_MUSER_AllComps(CLK_IN, 
+                                  CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   CLK_DIV_10_MUSER_AllComps  XLXI_2 (.CLKIN(CLK_IN), 
+                                     .CLKOUT(XLXN_1));
+   CLK_DIV_10_MUSER_AllComps  XLXI_3 (.CLKIN(XLXN_1), 
+                                     .CLKOUT(XLXN_2));
+   CLK_DIV_10_MUSER_AllComps  XLXI_4 (.CLKIN(XLXN_2), 
+                                     .CLKOUT(XLXN_3));
+   CLK_DIV_10_MUSER_AllComps  XLXI_5 (.CLKIN(XLXN_3), 
+                                     .CLKOUT(XLXN_4));
+   CLK_DIV_10_MUSER_AllComps  XLXI_6 (.CLKIN(XLXN_4), 
+                                     .CLKOUT(XLXN_5));
+   CLK_DIV_10_MUSER_AllComps  XLXI_7 (.CLKIN(XLXN_5), 
+                                     .CLKOUT(XLXN_6));
+   CLK_DIV_10_MUSER_AllComps  XLXI_8 (.CLKIN(XLXN_6), 
+                                     .CLKOUT(CLK_OUT));
+endmodule
+`timescale 1ns / 1ps
+
+module CLK_DIV_20M_MUSER_AllComps(CLK_IN, 
+                                  CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_2;
+   wire XLXN_6;
+   
+   CLK_DIV_10M_MUSER_AllComps  XLXI_1 (.CLK_IN(CLK_IN), 
+                                      .CLK_OUT(XLXN_2));
+   (* HU_SET = "XLXI_2_25" *) 
+   FTC_HXILINX_AllComps  XLXI_2 (.C(XLXN_2), 
+                                .CLR(XLXN_6), 
+                                .T(XLXN_2), 
+                                .Q(CLK_OUT));
+   GND  XLXI_3 (.G(XLXN_6));
+endmodule
+`timescale 1ns / 1ps
+
+module Counter_UP_0_3_withTC_MUSER_AllComps(CLK_IN, 
+                                            CLR_FF, 
+                                            D0, 
+                                            D1, 
+                                            TC);
+
+    input CLK_IN;
+    input CLR_FF;
+   output D0;
+   output D1;
+   output TC;
+   
+   wire XLXN_1;
+   wire D0_DUMMY;
+   wire D1_DUMMY;
+   
+   assign D0 = D0_DUMMY;
+   assign D1 = D1_DUMMY;
+   (* HU_SET = "XLXI_1_26" *) 
+   FJKC_HXILINX_AllComps  XLXI_1 (.C(CLK_IN), 
+                                 .CLR(CLR_FF), 
+                                 .J(XLXN_1), 
+                                 .K(XLXN_1), 
+                                 .Q(D0_DUMMY));
+   (* HU_SET = "XLXI_2_27" *) 
+   FJKC_HXILINX_AllComps  XLXI_2 (.C(CLK_IN), 
+                                 .CLR(CLR_FF), 
+                                 .J(D0_DUMMY), 
+                                 .K(D0_DUMMY), 
+                                 .Q(D1_DUMMY));
+   VCC  XLXI_4 (.P(XLXN_1));
+   AND2  XLXI_5 (.I0(D1_DUMMY), 
+                .I1(D0_DUMMY), 
+                .O(TC));
+endmodule
+`timescale 1ns / 1ps
+
+module LDR_LED_V3_MUSER_AllComps(CLK_IN, 
+                                 LDR, 
+                                 LED_LDR);
+
+    input CLK_IN;
+    input LDR;
+   output LED_LDR;
+   
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_17;
+   wire XLXN_20;
+   wire XLXN_21;
+   wire XLXN_22;
+   wire XLXN_34;
+   
+   AND2  XLXI_1 (.I0(XLXN_2), 
+                .I1(LDR), 
+                .O(XLXN_21));
+   AND2  XLXI_3 (.I0(XLXN_20), 
+                .I1(LDR), 
+                .O(XLXN_3));
+   Counter_UP_0_3_withTC_MUSER_AllComps  XLXI_4 (.CLK_IN(XLXN_3), 
+                                                .CLR_FF(XLXN_34), 
+                                                .D0(), 
+                                                .D1(), 
+                                                .TC(XLXN_2));
+   INV  XLXI_5 (.I(LDR), 
+               .O(XLXN_17));
+   CLK_DIV_20M_MUSER_AllComps  XLXI_7 (.CLK_IN(CLK_IN), 
+                                      .CLK_OUT(XLXN_20));
+   (* HU_SET = "XLXI_8_28" *) 
+   FJKC_HXILINX_AllComps  XLXI_8 (.C(XLXN_21), 
+                                 .CLR(XLXN_17), 
+                                 .J(XLXN_22), 
+                                 .K(XLXN_22), 
+                                 .Q(XLXN_34));
+   VCC  XLXI_10 (.P(XLXN_22));
+   AND2  XLXI_18 (.I0(XLXN_34), 
+                 .I1(XLXN_22), 
+                 .O(LED_LDR));
+endmodule
+`timescale 1ns / 1ps
+
+module AllComps(CLK_IN_P123, 
+                ESP1_K5_1_P121, 
+                ESP2_K5_3_P120, 
+                ESP3_K5_5_P119, 
+                ESP4_K5_7_P118, 
+                ESP5_K5_9_P117, 
+                ESP6_K5_11_P116, 
+                ESP7_K5_13_P115, 
+                ESP8_K5_15_P114, 
+                IR1_K6_3_P111, 
+                IR2_K6_1_P112, 
+                IR3_K6_7_P104, 
+                IR4_K6_5_P105, 
+                IR5_K6_9_P102, 
+                LDR_SS_K6_15_P99, 
+                SW0_P66, 
+                SW1_P62, 
+                SW2_P61, 
+                SW3_P59, 
+                SW4_P58, 
+                BD1_1_K3_3_P142, 
+                BD1_2_K3_5_P140, 
+                BD1_3__K3_7_P138, 
+                BD1_4_K3_9_P134, 
+                BD2_1_K4_3_P143, 
+                BD2_2_K4_5_P141, 
+                BD2_3_K4_7_P139, 
+                BD2_4_K4_9_P137, 
+                BUZZER_P83, 
+                LED_Alarm_GR_P67, 
+                LED_Alarm_Status_P82, 
+                LED_Garage_K1_11_P9_A, 
+                LED_Kitchen_K1_3_P21, 
+                LED_LDR_K1_13_P7, 
+                LED_LivingRoom_K1_9_P11, 
+                LED_Room1_K1_5_P16, 
+                LED_Room2_K1_7_P14);
+
+    input CLK_IN_P123;
+    input ESP1_K5_1_P121;
+    input ESP2_K5_3_P120;
+    input ESP3_K5_5_P119;
+    input ESP4_K5_7_P118;
+    input ESP5_K5_9_P117;
+    input ESP6_K5_11_P116;
+    input ESP7_K5_13_P115;
+    input ESP8_K5_15_P114;
+    input IR1_K6_3_P111;
+    input IR2_K6_1_P112;
+    input IR3_K6_7_P104;
+    input IR4_K6_5_P105;
+    input IR5_K6_9_P102;
+    input LDR_SS_K6_15_P99;
+    input SW0_P66;
+    input SW1_P62;
+    input SW2_P61;
+    input SW3_P59;
+    input SW4_P58;
+   output BD1_1_K3_3_P142;
+   output BD1_2_K3_5_P140;
+   output BD1_3__K3_7_P138;
+   output BD1_4_K3_9_P134;
+   output BD2_1_K4_3_P143;
+   output BD2_2_K4_5_P141;
+   output BD2_3_K4_7_P139;
+   output BD2_4_K4_9_P137;
+   output BUZZER_P83;
+   output LED_Alarm_GR_P67;
+   output LED_Alarm_Status_P82;
+   output LED_Garage_K1_11_P9_A;
+   output LED_Kitchen_K1_3_P21;
+   output LED_LDR_K1_13_P7;
+   output LED_LivingRoom_K1_9_P11;
+   output LED_Room1_K1_5_P16;
+   output LED_Room2_K1_7_P14;
+   
+   wire To_ESP_GarageStatus;
+   wire XLXN_208;
+   wire XLXN_209;
+   wire XLXN_210;
+   wire XLXN_211;
+   wire XLXN_249;
+   wire XLXN_250;
+   wire XLXN_251;
+   wire XLXN_375;
+   wire XLXN_376;
+   wire XLXN_377;
+   wire XLXN_378;
+   wire XLXN_379;
+   wire XLXN_451;
+   wire XLXN_462;
+   
+   AND2  XLXI_63 (.I0(XLXN_462), 
+                 .I1(To_ESP_GarageStatus), 
+                 .O(BUZZER_P83));
+   CLK_DIV_20M_MUSER_AllComps  XLXI_64 (.CLK_IN(CLK_IN_P123), 
+                                       .CLK_OUT(XLXN_462));
+   AND2  XLXI_65 (.I0(XLXN_462), 
+                 .I1(To_ESP_GarageStatus), 
+                 .O(LED_Alarm_GR_P67));
+   LDR_LED_V3_MUSER_AllComps  XLXI_80 (.CLK_IN(CLK_IN_P123), 
+                                      .LDR(LDR_SS_K6_15_P99), 
+                                      .LED_LDR(LED_LDR_K1_13_P7));
+   BUF  XLXI_84 (.I(XLXN_208), 
+                .O(BD1_1_K3_3_P142));
+   BUF  XLXI_85 (.I(XLXN_209), 
+                .O(BD1_2_K3_5_P140));
+   BUF  XLXI_86 (.I(XLXN_210), 
+                .O(BD1_3__K3_7_P138));
+   BUF  XLXI_87 (.I(XLXN_211), 
+                .O(BD1_4_K3_9_P134));
+   BUF  XLXI_96 (.I(XLXN_451), 
+                .O(BD2_1_K4_3_P143));
+   BUF  XLXI_97 (.I(XLXN_249), 
+                .O(BD2_2_K4_5_P141));
+   BUF  XLXI_98 (.I(XLXN_251), 
+                .O(BD2_3_K4_7_P139));
+   BUF  XLXI_99 (.I(XLXN_250), 
+                .O(BD2_4_K4_9_P137));
+   BUF  XLXI_188 (.I(XLXN_375), 
+                 .O(LED_Kitchen_K1_3_P21));
+   BUF  XLXI_189 (.I(XLXN_376), 
+                 .O(LED_Room1_K1_5_P16));
+   BUF  XLXI_190 (.I(XLXN_377), 
+                 .O(LED_Room2_K1_7_P14));
+   BUF  XLXI_191 (.I(XLXN_378), 
+                 .O(LED_LivingRoom_K1_9_P11));
+   BUF  XLXI_192 (.I(XLXN_379), 
+                 .O(LED_Garage_K1_11_P9_A));
+   Regular_LED_V3_MUSER_AllComps  XLXI_198 (.ESP_IN(ESP1_K5_1_P121), 
+                                           .SW_IN(SW2_P61), 
+                                           .LED_OUT(XLXN_375));
+   Regular_LED_V3_MUSER_AllComps  XLXI_203 (.ESP_IN(ESP2_K5_3_P120), 
+                                           .SW_IN(SW1_P62), 
+                                           .LED_OUT(XLXN_376));
+   Regular_LED_V3_MUSER_AllComps  XLXI_205 (.ESP_IN(ESP3_K5_5_P119), 
+                                           .SW_IN(SW0_P66), 
+                                           .LED_OUT(XLXN_377));
+   Regular_LED_V3_MUSER_AllComps  XLXI_206 (.ESP_IN(ESP4_K5_7_P118), 
+                                           .SW_IN(SW4_P58), 
+                                           .LED_OUT(XLXN_378));
+   Regular_LED_V3_MUSER_AllComps  XLXI_207 (.ESP_IN(ESP5_K5_9_P117), 
+                                           .SW_IN(SW3_P59), 
+                                           .LED_OUT(XLXN_379));
+   Garage_Door_V6_MUSER_AllComps  XLXI_214 (.CLK_IN(CLK_IN_P123), 
+                                           .ESP_IN(ESP6_K5_11_P116), 
+                                           .IR1_IN(IR1_K6_3_P111), 
+                                           .IR2_IN(IR2_K6_1_P112), 
+                                           .SW_IN(SW2_P61), 
+                                           .BD1(XLXN_208), 
+                                           .BD2(XLXN_209), 
+                                           .BD3(XLXN_210), 
+                                           .BD4(XLXN_211));
+   Garage_Door_V6_MUSER_AllComps  XLXI_218 (.CLK_IN(CLK_IN_P123), 
+                                           .ESP_IN(ESP7_K5_13_P115), 
+                                           .IR1_IN(IR3_K6_7_P104), 
+                                           .IR2_IN(IR4_K6_5_P105), 
+                                           .SW_IN(SW1_P62), 
+                                           .BD1(XLXN_451), 
+                                           .BD2(XLXN_249), 
+                                           .BD3(XLXN_251), 
+                                           .BD4(XLXN_250));
+   Alarm_Garage_V6_MUSER_AllComps  XLXI_223 (.ESP_IN(ESP8_K5_15_P114), 
+                                            .IR_5(IR5_K6_9_P102), 
+                                            .SW_IN(SW0_P66), 
+                                            .ActiveGR(To_ESP_GarageStatus), 
+                                            .MODE_ON_OFF(LED_Alarm_Status_P82));
+endmodule

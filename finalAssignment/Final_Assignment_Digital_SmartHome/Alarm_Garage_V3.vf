@@ -1,0 +1,85 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Alarm_Garage_V3.vf
+// /___/   /\     Timestamp : 12/15/2021 18:29:15
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Alarm_Garage_V3.vf -w E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Alarm_Garage_V3.sch
+//Design Name: Alarm_Garage_V3
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_Alarm_Garage_V3(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Alarm_Garage_V3(ESP_IN, 
+                       IR_5, 
+                       PB_IN, 
+                       SW_MODE_IN, 
+                       ActiveGR);
+
+    input ESP_IN;
+    input IR_5;
+    input PB_IN;
+    input SW_MODE_IN;
+   output ActiveGR;
+   
+   wire XLXN_1;
+   wire XLXN_4;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire XLXN_18;
+   
+   AND2  XLXI_1 (.I0(XLXN_1), 
+                .I1(PB_IN), 
+                .O(XLXN_4));
+   INV  XLXI_2 (.I(SW_MODE_IN), 
+               .O(XLXN_1));
+   OR2  XLXI_3 (.I0(ESP_IN), 
+               .I1(XLXN_4), 
+               .O(XLXN_6));
+   (* HU_SET = "XLXI_4_16" *) 
+   FTC_HXILINX_Alarm_Garage_V3  XLXI_4 (.C(XLXN_6), 
+                                       .CLR(XLXN_7), 
+                                       .T(XLXN_6), 
+                                       .Q(XLXN_18));
+   GND  XLXI_5 (.G(XLXN_7));
+   INV  XLXI_7 (.I(IR_5), 
+               .O(XLXN_9));
+   AND2  XLXI_11 (.I0(XLXN_9), 
+                 .I1(XLXN_18), 
+                 .O(ActiveGR));
+endmodule

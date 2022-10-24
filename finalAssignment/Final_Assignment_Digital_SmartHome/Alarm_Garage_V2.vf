@@ -1,0 +1,188 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Alarm_Garage_V2.vf
+// /___/   /\     Timestamp : 12/15/2021 18:18:35
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Alarm_Garage_V2.vf -w E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Alarm_Garage_V2.sch
+//Design Name: Alarm_Garage_V2
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_Alarm_Garage_V2(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module CLK_DIV_10_MUSER_Alarm_Garage_V2(CLKIN, 
+                                        CLKOUT);
+
+    input CLKIN;
+   output CLKOUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_8;
+   wire XLXN_13;
+   wire XLXN_16;
+   wire XLXN_17;
+   wire CLKOUT_DUMMY;
+   
+   assign CLKOUT = CLKOUT_DUMMY;
+   INV  XLXI_1 (.I(XLXN_16), 
+               .O(XLXN_2));
+   INV  XLXI_2 (.I(XLXN_17), 
+               .O(XLXN_1));
+   FDC  XLXI_3 (.C(CLKIN), 
+               .CLR(XLXN_4), 
+               .D(XLXN_1), 
+               .Q(XLXN_17));
+   AND2  XLXI_4 (.I0(XLXN_16), 
+                .I1(XLXN_8), 
+                .O(XLXN_4));
+   INV  XLXI_5 (.I(XLXN_8), 
+               .O(CLKOUT_DUMMY));
+   FDC  XLXI_6 (.C(XLXN_1), 
+               .CLR(XLXN_4), 
+               .D(XLXN_2), 
+               .Q(XLXN_16));
+   INV  XLXI_7 (.I(XLXN_13), 
+               .O(XLXN_3));
+   FDC  XLXI_8 (.C(XLXN_2), 
+               .CLR(XLXN_4), 
+               .D(XLXN_3), 
+               .Q(XLXN_13));
+   FDC  XLXI_9 (.C(XLXN_3), 
+               .CLR(XLXN_4), 
+               .D(CLKOUT_DUMMY), 
+               .Q(XLXN_8));
+endmodule
+`timescale 1ns / 1ps
+
+module CLK_DIV_10M_MUSER_Alarm_Garage_V2(CLK_IN, 
+                                         CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_2;
+   wire XLXN_3;
+   wire XLXN_4;
+   wire XLXN_5;
+   wire XLXN_6;
+   
+   CLK_DIV_10_MUSER_Alarm_Garage_V2  XLXI_2 (.CLKIN(CLK_IN), 
+                                            .CLKOUT(XLXN_1));
+   CLK_DIV_10_MUSER_Alarm_Garage_V2  XLXI_3 (.CLKIN(XLXN_1), 
+                                            .CLKOUT(XLXN_2));
+   CLK_DIV_10_MUSER_Alarm_Garage_V2  XLXI_4 (.CLKIN(XLXN_2), 
+                                            .CLKOUT(XLXN_3));
+   CLK_DIV_10_MUSER_Alarm_Garage_V2  XLXI_5 (.CLKIN(XLXN_3), 
+                                            .CLKOUT(XLXN_4));
+   CLK_DIV_10_MUSER_Alarm_Garage_V2  XLXI_6 (.CLKIN(XLXN_4), 
+                                            .CLKOUT(XLXN_5));
+   CLK_DIV_10_MUSER_Alarm_Garage_V2  XLXI_7 (.CLKIN(XLXN_5), 
+                                            .CLKOUT(XLXN_6));
+   CLK_DIV_10_MUSER_Alarm_Garage_V2  XLXI_8 (.CLKIN(XLXN_6), 
+                                            .CLKOUT(CLK_OUT));
+endmodule
+`timescale 1ns / 1ps
+
+module CLK_DIV_20M_MUSER_Alarm_Garage_V2(CLK_IN, 
+                                         CLK_OUT);
+
+    input CLK_IN;
+   output CLK_OUT;
+   
+   wire XLXN_2;
+   wire XLXN_6;
+   
+   CLK_DIV_10M_MUSER_Alarm_Garage_V2  XLXI_1 (.CLK_IN(CLK_IN), 
+                                             .CLK_OUT(XLXN_2));
+   (* HU_SET = "XLXI_2_16" *) 
+   FTC_HXILINX_Alarm_Garage_V2  XLXI_2 (.C(XLXN_2), 
+                                       .CLR(XLXN_6), 
+                                       .T(XLXN_2), 
+                                       .Q(CLK_OUT));
+   GND  XLXI_3 (.G(XLXN_6));
+endmodule
+`timescale 1ns / 1ps
+
+module Alarm_Garage_V2(CLK_IN, 
+                       ESP_IN, 
+                       IR_5, 
+                       PB_IN, 
+                       SW_MODE_IN, 
+                       BUZZER);
+
+    input CLK_IN;
+    input ESP_IN;
+    input IR_5;
+    input PB_IN;
+    input SW_MODE_IN;
+   output BUZZER;
+   
+   wire XLXN_1;
+   wire XLXN_4;
+   wire XLXN_6;
+   wire XLXN_7;
+   wire XLXN_9;
+   wire XLXN_18;
+   wire XLXN_22;
+   
+   AND2  XLXI_1 (.I0(XLXN_1), 
+                .I1(PB_IN), 
+                .O(XLXN_4));
+   INV  XLXI_2 (.I(SW_MODE_IN), 
+               .O(XLXN_1));
+   OR2  XLXI_3 (.I0(ESP_IN), 
+               .I1(XLXN_4), 
+               .O(XLXN_6));
+   (* HU_SET = "XLXI_4_17" *) 
+   FTC_HXILINX_Alarm_Garage_V2  XLXI_4 (.C(XLXN_6), 
+                                       .CLR(XLXN_7), 
+                                       .T(XLXN_6), 
+                                       .Q(XLXN_18));
+   GND  XLXI_5 (.G(XLXN_7));
+   INV  XLXI_7 (.I(IR_5), 
+               .O(XLXN_9));
+   AND3  XLXI_8 (.I0(XLXN_22), 
+                .I1(XLXN_9), 
+                .I2(XLXN_18), 
+                .O(BUZZER));
+   CLK_DIV_20M_MUSER_Alarm_Garage_V2  XLXI_10 (.CLK_IN(CLK_IN), 
+                                              .CLK_OUT(XLXN_22));
+endmodule

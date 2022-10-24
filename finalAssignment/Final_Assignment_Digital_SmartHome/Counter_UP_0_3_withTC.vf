@@ -1,0 +1,94 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Counter_UP_0_3_withTC.vf
+// /___/   /\     Timestamp : 12/15/2021 11:43:45
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Counter_UP_0_3_withTC.vf -w E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Counter_UP_0_3_withTC.sch
+//Design Name: Counter_UP_0_3_withTC
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FJKC_HXILINX_Counter_UP_0_3_withTC(Q, C, CLR, J, K);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              J;
+   input              K;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+
+
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else
+        begin
+           if(!J)
+           begin
+              if(K)
+              Q <= 1'b0;
+           end
+           else
+           begin
+              if(!K)
+              Q <= 1'b1;
+              else 
+              Q <= !Q;
+           end
+        end
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Counter_UP_0_3_withTC(CLK_IN, 
+                             CLR_FF, 
+                             D0, 
+                             D1, 
+                             TC);
+
+    input CLK_IN;
+    input CLR_FF;
+   output D0;
+   output D1;
+   output TC;
+   
+   wire XLXN_1;
+   wire D0_DUMMY;
+   wire D1_DUMMY;
+   
+   assign D0 = D0_DUMMY;
+   assign D1 = D1_DUMMY;
+   (* HU_SET = "XLXI_1_0" *) 
+   FJKC_HXILINX_Counter_UP_0_3_withTC  XLXI_1 (.C(CLK_IN), 
+                                              .CLR(CLR_FF), 
+                                              .J(XLXN_1), 
+                                              .K(XLXN_1), 
+                                              .Q(D0_DUMMY));
+   (* HU_SET = "XLXI_2_1" *) 
+   FJKC_HXILINX_Counter_UP_0_3_withTC  XLXI_2 (.C(CLK_IN), 
+                                              .CLR(CLR_FF), 
+                                              .J(D0_DUMMY), 
+                                              .K(D0_DUMMY), 
+                                              .Q(D1_DUMMY));
+   VCC  XLXI_4 (.P(XLXN_1));
+   AND2  XLXI_5 (.I0(D1_DUMMY), 
+                .I1(D0_DUMMY), 
+                .O(TC));
+endmodule

@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7
+# Build 321239 by xbuild on Fri Sep 27 19:31:35 MDT 2013
+# Start of session at: Wed Dec 15 22:09:49 2021
+# Process ID: 14400
+# Log file: E:/2D/Digital/finalAssignment/testLED/planAhead_run_1/planAhead.log
+# Journal file: E:/2D/Digital/finalAssignment/testLED/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source E:/2D/Digital/finalAssignment/testLED/pa.fromHdl.tcl
+update_compile_order -fileset sim_1
+startgroup
+set_property package_pin P123 [get_ports C_IN]
+endgroup
+startgroup
+set_property package_pin P142 [get_ports Phase1]
+endgroup
+startgroup
+set_property package_pin P140 [get_ports Phase2]
+endgroup
+startgroup
+set_property package_pin P138 [get_ports Phase3]
+endgroup
+startgroup
+set_property package_pin P134 [get_ports Phase4]
+endgroup
+save_constraints

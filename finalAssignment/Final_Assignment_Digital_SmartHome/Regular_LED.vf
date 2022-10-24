@@ -1,0 +1,73 @@
+////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////
+//   ____  ____ 
+//  /   /\/   / 
+// /___/  \  /    Vendor: Xilinx 
+// \   \   \/     Version : 14.7
+//  \   \         Application : sch2hdl
+//  /   /         Filename : Regular_LED.vf
+// /___/   /\     Timestamp : 12/15/2021 11:55:00
+// \   \  /  \ 
+//  \___\/\___\ 
+//
+//Command: sch2hdl -intstyle ise -family spartan6 -verilog E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Regular_LED.vf -w E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/Regular_LED.sch
+//Design Name: Regular_LED
+//Device: spartan6
+//Purpose:
+//    This verilog netlist is translated from an ECS schematic.It can be 
+//    synthesized and simulated, but it should not be modified. 
+//
+`timescale 100 ps / 10 ps
+
+module FTC_HXILINX_Regular_LED(Q, C, CLR, T);
+   
+   output             Q;
+
+   input 	      C;	
+   input 	      CLR;	
+   input              T;
+   
+   parameter INIT = 1'b0;
+   reg                Q = INIT;
+  
+   
+ 
+   always @(posedge C or posedge CLR)
+     begin
+	if (CLR)
+	  Q <= 1'b0;
+	else if(T)
+          Q <= !Q;
+     end
+   
+endmodule
+`timescale 1ns / 1ps
+
+module Regular_LED(CLR_FF, 
+                   ESP_IN, 
+                   PB_IN, 
+                   SW_MODE_IN, 
+                   LED_OUT);
+
+    input CLR_FF;
+    input ESP_IN;
+    input PB_IN;
+    input SW_MODE_IN;
+   output LED_OUT;
+   
+   wire XLXN_1;
+   wire XLXN_14;
+   
+   AND2  XLXI_1 (.I0(SW_MODE_IN), 
+                .I1(PB_IN), 
+                .O(XLXN_1));
+   OR2  XLXI_2 (.I0(ESP_IN), 
+               .I1(XLXN_1), 
+               .O(XLXN_14));
+   (* HU_SET = "XLXI_4_0" *) 
+   FTC_HXILINX_Regular_LED  XLXI_4 (.C(XLXN_14), 
+                                   .CLR(CLR_FF), 
+                                   .T(XLXN_14), 
+                                   .Q(LED_OUT));
+endmodule
