@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2021-12-17T17:36:01</DateModified>
+  <DateModified>2022-10-24T08:15:13</DateModified>
   <ModuleName>AllComps</ModuleName>
   <SummaryTimeStamp>2021-12-17T16:03:09</SummaryTimeStamp>
-  <SavedFilePath>E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/iseconfig/AllComps.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome\</ImplementationReportsDirectory>
+  <SavedFilePath>E:/2D/Mid/Digital/Digital_System_Fundamental_1/finalAssignment/Final_Assignment_Digital_SmartHome/iseconfig/AllComps.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>E:/2D/Mid/Digital/Digital_System_Fundamental_1/finalAssignment/Final_Assignment_Digital_SmartHome\</ImplementationReportsDirectory>
   <DateInitialized>2021-12-15T12:04:14</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

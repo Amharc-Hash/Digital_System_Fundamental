@@ -9,6 +9,7 @@
          <ClosedNodesVersion>2</ClosedNodesVersion>
          <ClosedNode>/Alarm_Fire_V2 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|Alarm_Fire_V2.sch</ClosedNode>
          <ClosedNode>/Alarm_Garage_V2 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|Alarm_Garage_V2.sch</ClosedNode>
+         <ClosedNode>/Alarm_Garage_V2 E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|Alarm_Garage_V2.sch</ClosedNode>
          <ClosedNode>/AllComps E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|AllComps.sch/XLXI_10 - GarageDoor</ClosedNode>
          <ClosedNode>/AllComps E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|AllComps.sch/XLXI_100 - Kitchen_Curtain_V5</ClosedNode>
          <ClosedNode>/AllComps E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|AllComps.sch/XLXI_100 - Kitchen_Curtain_V5/XLXI_34 - CLK_DIV_100K</ClosedNode>
@@ -31,33 +32,44 @@
          <ClosedNode>/AllComps E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|AllComps.sch/XLXI_80 - LDR_LED_V3</ClosedNode>
          <ClosedNode>/AllComps E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|AllComps.sch/XLXI_82 - GarageDoor_V5</ClosedNode>
          <ClosedNode>/AllComps E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|AllComps.sch/XLXI_95 - GarageDoor_V5</ClosedNode>
+         <ClosedNode>/AllComps E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|AllComps.sch</ClosedNode>
          <ClosedNode>/CLK_DIV_100K E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|CLK_DIV_100K.sch</ClosedNode>
          <ClosedNode>/CLK_DIV_10M E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|CLK_DIV_10M.sch</ClosedNode>
          <ClosedNode>/CLK_DIV_20M E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|CLK_DIV_20M.sch</ClosedNode>
          <ClosedNode>/CLK_DIV_40M E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|CLK_DIV_40M.sch</ClosedNode>
          <ClosedNode>/GarageDoor E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|GarageDoor.sch</ClosedNode>
+         <ClosedNode>/GarageDoor E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|GarageDoor.sch</ClosedNode>
          <ClosedNode>/GarageDoor_V2 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|GarageDoor_V2.sch</ClosedNode>
+         <ClosedNode>/GarageDoor_V2 E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|GarageDoor_V2.sch</ClosedNode>
          <ClosedNode>/GarageDoor_V4 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|GarageDoor_V4.sch</ClosedNode>
+         <ClosedNode>/GarageDoor_V4 E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|GarageDoor_V4.sch</ClosedNode>
          <ClosedNode>/GarageDoor_V5 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|GarageDoor_V5.sch</ClosedNode>
+         <ClosedNode>/GarageDoor_V5 E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|GarageDoor_V5.sch</ClosedNode>
          <ClosedNode>/Garage_Door_V6 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|Garage_Door_V6.sch</ClosedNode>
          <ClosedNode>/GarrageDoor_V3 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|GarrageDoor_V3.sch</ClosedNode>
+         <ClosedNode>/GarrageDoor_V3 E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|GarrageDoor_V3.sch</ClosedNode>
          <ClosedNode>/Kitchen_Curtain E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|Kitchen_Curtain.sch</ClosedNode>
+         <ClosedNode>/Kitchen_Curtain E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|Kitchen_Curtain.sch</ClosedNode>
          <ClosedNode>/Kitchen_Curtain_V2 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|Kitchen_Curtain_V2.sch</ClosedNode>
+         <ClosedNode>/Kitchen_Curtain_V2 E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|Kitchen_Curtain_V2.sch</ClosedNode>
          <ClosedNode>/Kitchen_Curtain_V3 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|Kitchen_Curtain_V3.sch</ClosedNode>
+         <ClosedNode>/Kitchen_Curtain_V3 E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|Kitchen_Curtain_V3.sch</ClosedNode>
          <ClosedNode>/Kitchen_Curtain_V4 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|Kitchen_Curtain_V4.sch</ClosedNode>
+         <ClosedNode>/Kitchen_Curtain_V4 E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|Kitchen_Curtain_V4.sch</ClosedNode>
          <ClosedNode>/Kitchen_Curtain_V5 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|Kitchen_Curtain_V5.sch</ClosedNode>
+         <ClosedNode>/Kitchen_Curtain_V5 E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|Kitchen_Curtain_V5.sch</ClosedNode>
          <ClosedNode>/LDR_LED E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|LDR_LED.sch</ClosedNode>
+         <ClosedNode>/LDR_LED E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|LDR_LED.sch</ClosedNode>
          <ClosedNode>/LDR_LED_V2 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|LDR_LED_V2.sch</ClosedNode>
+         <ClosedNode>/LDR_LED_V2 E:|2D|Mid|Digital|Digital_System_Fundamental_1|finalAssignment|Final_Assignment_Digital_SmartHome|LDR_LED_V2.sch</ClosedNode>
          <ClosedNode>/LDR_LED_V3 E:|2D|Digital|finalAssignment|Final_Assignment_Digital_SmartHome|LDR_LED_V3.sch</ClosedNode>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>AllComps (E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.sch)</SelectedItem>
-      </SelectedItems>
+      <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000020200000001000000010000006400000182000000020000000000000000000000000200000064ffffffff000000810000000300000002000001820000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>AllComps (E:/2D/Digital/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.sch)</CurrentItem>
+      <CurrentItem>AllComps (E:/2D/Mid/Digital/Digital_System_Fundamental_1/finalAssignment/Final_Assignment_Digital_SmartHome/AllComps.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -69,7 +81,7 @@
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bc0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001a0000000010000000100000000000000000000000064ffffffff000000810000000000000001000001a00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem></CurrentItem>
    </ItemView>
@@ -80,7 +92,7 @@
       <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000004d2000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000004060000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000001bc000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000000f00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
       <CurrentItem>AllComps.sch</CurrentItem>
    </ItemView>
@@ -107,13 +119,13 @@
          <ClosedNode>Synthesize - XST</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Generate Programming File</SelectedItem>
+         <SelectedItem></SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bc0000000100000000</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001a0000000010000000100000000000000000000000064ffffffff000000810000000000000001000001a00000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>Generate Programming File</CurrentItem>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <SourceProcessView>000000ff000000000000000200000112000000b701000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
@@ -200,12 +212,12 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem></SelectedItem>
+         <SelectedItem/>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001bc000000010000000100000000000000000000000064ffffffff000000810000000000000001000001bc0000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem/>
    </ItemView>
 </Project>
